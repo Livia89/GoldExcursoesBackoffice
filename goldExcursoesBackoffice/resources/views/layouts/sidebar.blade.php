@@ -1,0 +1,168 @@
+<div class="sidebar sidebar_mobile">
+	<nav>
+		<ul class="scrollbar">
+			<li class="item_menu active"><a href="#"><i class="margin-right-15 fas fa-tachometer-alt"></i>Dashboard</a> <small class="new_category">NEW</small></li>
+			<!--<li class="category_title">TITULO DE CATEGORIA </li> -->
+		<li class="item_menu li_dropdown">
+
+				<a href="/client/" class="closed">
+
+					<i class="margin-right-15 fas fa-cubes"></i>Cliente
+
+					<span class="float-right"><i class="fas fa-angle-left"></i><span>
+
+				</a>		
+
+				<ul class="dropdown_nav">
+					<li class="item_menu"><a href="/client/add/"><i class="margin-right-15 fas fa-tachometer-alt"></i>Adicionar</a></li>
+					<li class="item_menu"><a href="/client/edit/"><i class="margin-right-15 fas fa-tachometer-alt"></i>Editar</a></li>
+					<li class="item_menu"><a href="/client/detail/"><i class="margin-right-15 fas fa-tachometer-alt"></i>Listar</a></li>
+
+				</ul>
+
+			</li>
+
+			<li class="item_menu"><a href="#"><i class="margin-right-15 far fa-address-book"></i>Items</a></li>
+
+			<li class="category_title">COMPONENTES</li>
+
+			<li class="item_menu li_dropdown">
+
+				<a href="#" class="closed">
+
+					<i class="margin-right-15 fas fa-cubes"></i>Base
+
+					<span class="float-right"><i class="fas fa-angle-left"></i><span>
+
+				</a>		
+
+				<ul class="dropdown_nav">
+
+					<li class="item_menu"><a href="#"><i class="margin-right-15 fas fa-tachometer-alt"></i>Breadcumb</a></li>
+					<li class="item_menu"><a href="#"><i class="margin-right-15 fas fa-tachometer-alt"></i>Cards</a></li>
+					<li class="item_menu"><a href="#"><i class="margin-right-15 fas fa-tachometer-alt"></i>Carousel</a></li>
+					<li class="item_menu"><a href="#"><i class="margin-right-15 fas fa-tachometer-alt"></i>Collapse</a></li>
+					<li class="item_menu"><a href="#"><i class="margin-right-15 fas fa-tachometer-alt"></i>Forms</a></li>
+
+				</ul>
+
+			</li>
+
+			<li class="item_menu li_dropdown">
+
+				<a href="#" class="closed">
+					<i class="margin-right-15 fas fa-cubes"></i>Base
+					<span class="float-right"><i class="fas fa-angle-left"></i><span>
+
+				</a>		
+
+				<ul class="dropdown_nav">
+
+					<li class="item_menu"><a href="#"><i class="margin-right-15 fas fa-tachometer-alt"></i>Breadcumb</a></li>
+					<li class="item_menu"><a href="#"><i class="margin-right-15 fas fa-tachometer-alt"></i>Cards</a></li>
+					<li class="item_menu"><a href="#"><i class="margin-right-15 fas fa-tachometer-alt"></i>Carousel</a></li>
+					<li class="item_menu"><a href="#"><i class="margin-right-15 fas fa-tachometer-alt"></i>Collapse</a></li>
+					<li class="item_menu"><a href="#"><i class="margin-right-15 fas fa-tachometer-alt"></i>Forms</a></li>
+
+				</ul>
+
+				
+			</li>
+            <li class="item_menu li_dropdown">
+
+				<a href="#" class="closed">
+
+					<i class="margin-right-15 fas fa-cubes"></i>Base
+					<span class="float-right"><i class="fas fa-angle-left"></i><span>
+
+				</a>		
+
+				<ul class="dropdown_nav">
+
+					<li class="item_menu"><a href="#"><i class="margin-right-15 fas fa-tachometer-alt"></i>Breadcumb</a></li>
+					<li class="item_menu"><a href="#"><i class="margin-right-15 fas fa-tachometer-alt"></i>Cards</a></li>
+					<li class="item_menu"><a href="#"><i class="margin-right-15 fas fa-tachometer-alt"></i>Carousel</a></li>
+					<li class="item_menu"><a href="#"><i class="margin-right-15 fas fa-tachometer-alt"></i>Collapse</a></li>
+					<li class="item_menu"><a href="#"><i class="margin-right-15 fas fa-tachometer-alt"></i>Forms</a></li>
+
+				</ul>
+
+				
+			</li>
+            <li class="item_menu li_dropdown">
+
+				<a href="#" class="closed">
+
+					<i class="margin-right-15 fas fa-cubes"></i>Base
+                    <span class="float-right"><i class="fas fa-angle-left"></i><span>
+
+				</a>		
+
+				<ul class="dropdown_nav">
+
+					<li class="item_menu"><a href="#"><i class="margin-right-15 fas fa-tachometer-alt"></i>Breadcumb</a></li>
+					<li class="item_menu"><a href="#"><i class="margin-right-15 fas fa-tachometer-alt"></i>Cards</a></li>
+					<li class="item_menu"><a href="#"><i class="margin-right-15 fas fa-tachometer-alt"></i>Carousel</a></li>
+					<li class="item_menu"><a href="#"><i class="margin-right-15 fas fa-tachometer-alt"></i>Collapse</a></li>
+                	<li class="item_menu"><a href="#"><i class="margin-right-15 fas fa-tachometer-alt"></i>Forms</a></li>
+
+				</ul>
+
+			</li>
+
+			<li class="item_menu li_dropdown">
+
+				<a href="#" class="closed">
+
+					<i class="margin-right-15 fas fa-cubes"></i>Base
+					<span class="float-right"><i class="fas fa-angle-left"></i><span>
+
+				</a>		
+
+				<ul class="dropdown_nav">
+
+					<li class="item_menu"><a href="#"><i class="margin-right-15 fas fa-tachometer-alt"></i>Breadcumb</a></li>
+					<li class="item_menu"><a href="#"><i class="margin-right-15 fas fa-tachometer-alt"></i>Cards</a></li>
+					<li class="item_menu"><a href="#"><i class="margin-right-15 fas fa-tachometer-alt"></i>Carousel</a></li>
+					<li class="item_menu"><a href="#"><i class="margin-right-15 fas fa-tachometer-alt"></i>Collapse</a></li>
+					<li class="item_menu"><a href="#"><i class="margin-right-15 fas fa-tachometer-alt"></i>Forms</a></li>
+
+				</ul>
+
+			</li>
+
+			<li class="item_menu"><a href="#"><i class="margin-right-15 fas fa-tachometer-alt"></i>Typography</a>
+
+				<small class="new_category">NEW</small>
+
+			</li>
+			<li class="item_menu"><a href="#"><i class="margin-right-15 fas fa-tachometer-alt"></i>Typography</a></li>
+
+			<li class="item_menu"><a href="#"><i class="margin-right-15 fas fa-tachometer-alt"></i>Typography</a></li>
+
+			<li class="category_title">PAGES</li>
+			<li class="item_menu li_dropdown">
+
+				<a href="#" class="closed">
+
+					<i class="margin-right-15 fas fa-cubes"></i>Base
+					<span class="float-right"><i class="fas fa-angle-left"></i><span>
+
+				</a>		
+
+				<ul class="dropdown_nav">
+
+					<li class="item_menu"><a href="#"><i class="margin-right-15 fas fa-tachometer-alt"></i>Breadcumb</a></li>
+					<li class="item_menu"><a href="#"><i class="margin-right-15 fas fa-tachometer-alt"></i>Cards</a></li>
+					<li class="item_menu"><a href="#"><i class="margin-right-15 fas fa-tachometer-alt"></i>Carousel</a></li>
+					<li class="item_menu"><a href="#"><i class="margin-right-15 fas fa-tachometer-alt"></i>Collapse</a></li>
+					<li class="item_menu"><a href="#"><i class="margin-right-15 fas fa-tachometer-alt"></i>Forms</a></li>
+
+				</ul>
+			</li>
+			<li class="item_menu li_bottom download"><a href="#"><i class="margin-right-15 fas fa-cloud-download-alt"></i> Download Lusodados</a></li>
+			<li class="item_menu buy_now"><a href="#"><i class="margin-right-15 fas fa-shopping-cart"></i> Buy NOW! </a></li>
+		</ul>
+	</nav>
+        <button class="close_nav"><i class="fas fa-chevron-left"></i></button>
+</div>

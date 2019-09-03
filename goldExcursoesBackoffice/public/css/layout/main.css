@@ -1,0 +1,75 @@
+#container-master{overflow: hidden;}
+
+.main_content{
+
+	width: calc(100% - 0px);
+
+	background-color: #e4e5e6;
+
+	position: relative;
+
+	max-width: var(--max-width-content);
+
+	transition: margin .3s ease-out;
+
+}
+
+.main_content header, 
+
+.main_content footer{
+
+	height: 50px; 
+
+	line-height: 50px; 
+
+	background: #fff; 
+
+	border-bottom: 1px solid #a4b7c1; 
+
+	position: relative;
+
+	word-break: break-all;
+
+	overflow: hidden;
+
+}
+
+.main_content footer{
+
+	width: calc(100% - 20px);	
+
+	border-bottom: none;
+
+	border-top: 1px solid #a4b7c1;
+
+	padding: 0 10px;
+
+	font-size: 12px;
+
+
+
+} /* Só para apresentação depois pode tirar */
+
+
+.main_content footer a{color: #20a8d8;}
+
+.main_content .float-left li:not(:first-of-type):before{content: '/'; color: #536c79;}
+
+.main_content section div:nth-of-type(1){background: red;}
+
+.main_content section div:nth-of-type(2){background: blue;}
+
+.main_content section div:nth-of-type(3){background: purple;}
+
+.main_content section div:nth-of-type(4){background: yellow;}
+
+.main_content section div:nth-of-type(5){background: pink;}
+
+.main_content section div{display: inline-block; height: 120px;}
+
+.main_content header .float-right{ margin-right: 17px;}
+
+
+
+
+

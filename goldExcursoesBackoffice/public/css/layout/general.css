@@ -1,0 +1,64 @@
+    *{
+
+        padding:0;
+        margin:0;
+        vertical-align:baseline;
+        list-style:none;
+        border:0
+
+    }
+    :root{
+
+        --max-width-content: calc(100% - 210px);
+
+        --max-width-content-two: calc(100% - 420px);
+
+        --fix-sidebar-menu: auto;
+
+    }header, section, footer, aside, nav, main, article, figure{
+
+        display: block;
+
+    }
+    body, html{
+
+        font-family: "Roboto";
+
+        font-size: 14px;
+
+        
+
+    }
+    a, .cor-links, .user_active{
+
+        color: #20a8d8;
+    }
+    .cor-links:hover{
+
+        text-decoration: underline;
+
+        color: #20a8d8;
+
+    }
+    #content{padding: 10px;}
+    .dark_panel{
+
+        position: fixed;
+
+        top: 0;
+
+        left: 0;
+
+        bottom: 0;
+
+        width: 100%;
+
+        height: 100%;
+
+        background: rgba(0, 0, 0, 0.5);
+
+        z-index: 1;
+
+        display: none;
+
+    }/* CONTAINER MASTER */

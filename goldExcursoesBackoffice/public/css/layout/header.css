@@ -1,0 +1,75 @@
+    /***** HEADER *****/
+
+    #header{z-index: 2; position: relative;}
+
+    header.topo{
+            border-bottom: 1px solid #a4b7c1;
+            height: 55px; 
+            line-height: 55px;
+            font-size: 13.5px;
+            letter-spacing: 0.5px;
+            background-color: #fff;
+        
+    }
+    
+    header.fixed{width: 100%;}
+    li{list-style: none;}
+    a{text-decoration: none; }
+    figure.logo, 
+    figure.img_user{height: 55px; }
+    
+    .float-left.flex-container{height: 50px;}
+    figure.logo{width: calc(230px - 80px); text-align: center;}
+    figure.logo img{
+            width: 100px;
+            height: auto;
+            vertical-align: middle;
+    }
+    header .flex-container li{display: inline-block;}
+    /*HEADER - BTN MENU*/
+    .btn_menu a {
+            border-radius: 3px;
+            display: block;
+            width: 30px;
+            height: 30px;
+            text-align: center;
+            position: relative;
+            top: 50%;
+            transform: translateY(-50%); 
+            padding: 5px;
+    }
+    .btn_menu span.btn,
+    .btn_menu span.btn:after,
+    .btn_menu span.btn:before
+    { 
+            width: 20px;
+            height: 2px;
+            background-color: #536c79;
+            position: absolute; 
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+    }
+    .btn_menu span.btn:after{top: -5px; content: '';}
+    .btn_menu span.btn:before{top: 7px; content: '';}
+    .btn_menu a:hover span.btn,
+    .btn_menu a:hover span.btn:after,
+    .btn_menu a:hover span.btn:before
+    {background-color: #29363d;}
+    header a{
+            color: #536c79;
+    }
+    header a:hover{
+            color: #29363d;
+    } 
+    /* IMG-USER HEADER */
+    .float-right figure.img_user img{
+            height: 35px;
+            width: 35px;
+            vertical-align: middle;
+            border: 1px solid rgba(83, 108, 121, 0.5215686274509804);
+            border-radius: 100%;
+            padding: 3px;
+    }
+    .float-right figure.img_user img:hover{border: 1px solid #536c79;}
+    
