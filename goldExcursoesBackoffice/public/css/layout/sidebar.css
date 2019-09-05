@@ -20,23 +20,27 @@
 
 }
 
-.sidebar.fixed{top: 56px;}.sidebar nav, .scrollbar{
+.sidebar.fixed{top: 56px;}
+.sidebar nav, .scrollbar{
 
 	height: calc(100vh - 105px);
 
 	overflow-y: auto;
 
 }
+.sidebar nav{overflow-y: hidden;}
 .sidebar > ul{position: relative;}
 .sidebar li a{
 
 	color: inherit;
 
 	display: inline-block;
-
+	
+	text-decoration: none;
 	padding: 16.4px 10px;
 
-	width: calc(100% - 20px);
+	/*width: calc(100% - 20px); */
+	width: calc(100% - 0px);
 
 }.item_menu:hover{
 

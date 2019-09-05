@@ -37,6 +37,9 @@
 .column .col-3{width: calc(33% - 2px);}
 .column .col-4{width: calc(25% - 4px);}
 .column .col-5{width: calc(20% - 4px);}
+.display-none{
+        display: none; 
+}
 @media all and (max-width: 990px) and (min-width: 0){
         .display-none{
             display: none; 

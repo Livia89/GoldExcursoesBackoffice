@@ -1,7 +1,7 @@
 <div class="float-left flex-container">
     <figure class="logo">
 
-        <a href="#"><img src="../content/images/logos/logo-example.png" alt="logo" width="149px" height="50px"></a>
+        <a href="#"><img src="{{asset('images/logos/logoGE.png')}}" alt="logo" width="149px" height="50px"></a>
 
     </figure>
     <div data-side="left" class="btn_menu margin-side-10">
@@ -51,7 +51,7 @@
 
         <figure class="img_user">
 
-             <a href="{{url('/')}}" title="{{ config('app.name', 'Laravel') }}"><img src="../content/images/avatar/avatar.png" ></a>
+             <a href="{{url('/')}}" title="{{ config('app.name', 'Laravel') }}"><img src="{{ asset('images/avatar/avatar.png') }}" ></a>
 
         </figure>
         <div data-side="right" class="btn_menu margin-side-20">
