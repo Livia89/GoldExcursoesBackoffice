@@ -1,0 +1,11 @@
+{
+  "require": {
+    "goldexcursoes/project":"dev-master@dev"
+  },
+  "repositories": [
+    {
+       "type": "vcs",
+       "url": "https://github.com/Livia89/GoldExcursoesBackoffice.git" 
+    }
+  ]
+}

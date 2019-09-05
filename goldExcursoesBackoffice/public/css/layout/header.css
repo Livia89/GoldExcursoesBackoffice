@@ -16,8 +16,8 @@
     li{list-style: none;}
     a{text-decoration: none; }
     figure.logo, 
-    figure.img_user{height: 55px; }
-    
+    figure.img_user{height: 55px;  margin: 0;}
+    .topo .nav-link{padding: 0px 1rem;}
     .float-left.flex-container{height: 50px;}
     figure.logo{width: calc(230px - 80px); text-align: center;}
     figure.logo img{

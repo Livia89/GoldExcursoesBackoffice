@@ -18,7 +18,7 @@
         <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
         <!-- Styles -->
-        <link href="{{ asset('css/layout/app.css?' . date('YmdHis')) }}" rel="stylesheet">
+        <link href="{{ asset('css/layout/app.css?' . date('YmdHis')) }}" rel="stylesheet"> 
         <link href="{{ asset('css/layout/sidebar.css?' . date('YmdHis')) }}" rel="stylesheet">
         <link href="{{ asset('css/layout/aside_content.css?' . date('YmdHis')) }}" rel="stylesheet">
         <link href="{{ asset('css/layout/header.css?' . date('YmdHis')) }}" rel="stylesheet">
