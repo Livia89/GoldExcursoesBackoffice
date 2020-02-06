@@ -124,17 +124,17 @@ $(function(){
 	var headerTopo = document.getElementsByClassName("topo")[0]; // elemento à adicionar a classe 
 	// Adiciona a classe fixed se a janela for aberta com o scrollY > 0 e a correção do sidebar_menu o/
 
-	if(positionScroll) {
+	/*if(positionScroll) {
 
 		headerTopo.classList.add("fixed"); 
 
 		$(".sidebar").addClass("fixed");
 
-	}
+	}*/
 
 	/* quando rolar a página adiciona a classe fixed no header */
 
-	$(window).scroll(function(e){
+	/*$(window).scroll(function(e){
 
 		if(this.scrollY > 0){
 
@@ -145,7 +145,7 @@ $(function(){
 				if(($(".sidebar").hasClass("hideMenu"))){
 				/*	$("#sidebar_menu").css("--fix-sidebar-menu", "");*/
 
-					$("#main_content").css("margin-left", ""); 
+				/*	$("#main_content").css("margin-left", ""); 
 
 					if($(window).width() < 990){$("#main_content").css("margin-left", "");}
 					
@@ -156,7 +156,7 @@ $(function(){
 
 					
 
-					$("#main_content").css("margin-left", "210px"); 
+/*					$("#main_content").css("margin-left", "210px"); 
 
 					
 
@@ -179,7 +179,7 @@ $(function(){
 
 		
 
-	}); 
+	}); */
 
 	/* Quando clicar nos botões do menu */
 
@@ -284,12 +284,18 @@ $(function(){
 	});
 	/* Funcionalidade do menu */
 
+
+	
+
 	$(".li_dropdown").on("click", function(e){
 
-		var linkToOpenList = $(this).find("a").first();
-if(linkToOpenList.hasClass("closed")){
 
-			e.preventDefault();
+		var linkToOpenList = $(this).find("a").first();
+
+
+if(linkToOpenList.hasClass("closed")){
+			
+			
 			linkToOpenList.removeClass("closed").addClass("opened");
 
 			
@@ -299,6 +305,7 @@ if(linkToOpenList.hasClass("closed")){
 				
 
 			$(this).find(".dropdown_nav").fadeIn();
+			
 		}else{
 
 			linkToOpenList.find(".fa-angle-down").removeClass("fa-angle-down").addClass("fa-angle-left");

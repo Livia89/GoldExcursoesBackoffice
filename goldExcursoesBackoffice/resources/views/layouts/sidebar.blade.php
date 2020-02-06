@@ -5,7 +5,7 @@
 			<!--<li class="category_title">TITULO DE CATEGORIA </li> -->
 		<li class="item_menu li_dropdown">
 
-				<a href="/client/" class="closed">
+				<a href="#" class="closed">
 
 					<i class="margin-right-15 fas fa-cubes"></i>Cliente
 
