@@ -23,6 +23,7 @@
     body, html{
 
         font-family: "Roboto", "sans-serif";
+        font-family: "Nunito", "sans-serif";
 
         font-size: 14px;
 
@@ -40,7 +41,18 @@
         color: #20a8d8;
 
     }
-    #content{padding: 10px;}
+    #content{
+        margin: 5px;
+        background: #fff;
+        padding: 10px;
+        max-width: calc(100% - 10px);
+        height: calc(100vh - 100px);
+        overflow-y: auto;
+    }
+
+    #content::-webkit-scrollbar {
+        display: none;
+    }
     .dark_panel{
 
         position: fixed;
@@ -62,3 +74,8 @@
         display: none;
 
     }/* CONTAINER MASTER */
+
+
+    table a.btn{
+        line-height: 2;
+    }

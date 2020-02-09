@@ -1,6 +1,6 @@
 /*SIDEBAR*/
 
-#sidebar_menu{width: var(--fix-sidebar-menu); 	}  
+#sidebar_menu{width: var(--fix-sidebar-menu); 	}
 
 .sidebar{
 
@@ -20,6 +20,10 @@
 
 }
 
+nav{
+	background-color: inherit;
+}
+
 .sidebar.fixed{top: 56px;}
 .sidebar nav, .scrollbar{
 
@@ -30,14 +34,14 @@
 }
 .sidebar nav{overflow-y: hidden;}
 .sidebar > ul{position: relative;}
-.sidebar li a{
+.sidebar nav li a{
 
 	color: inherit;
 
 	display: inline-block;
-	
+
 	text-decoration: none;
-	padding: 16.4px 10px;
+	/* padding: 16.4px 10px; */
 
 	/*width: calc(100% - 20px); */
 	width: calc(100% - 0px);
@@ -55,19 +59,20 @@
 
 	padding: 20px;
 
-	 
+
 
 }
-.item_menu{
+nav .item_menu{
 
 	text-transform: capitalize;
 
 	position: relative;
 
-	cursor: pointer;
+	/* cursor: pointer; */
+	float: none;
 
 }
-.item_menu a .fas{color: red;} 
+.item_menu a .fas{color: red;}
 .item_menu.active{background-color: #33444c; color: #fff;}
 
 .item_menu.active svg{color: #20a8d8;}
@@ -166,7 +171,7 @@
 
 	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
 
-} 
+}
 .scrollbar::-webkit-scrollbar-thumb{
 
 		width: 10px;

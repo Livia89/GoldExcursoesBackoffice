@@ -14,10 +14,9 @@
 				</a>		
 
 				<ul class="dropdown_nav">
-					<li class="item_menu"><a href="/client/add/"><i class="margin-right-15 fas fa-tachometer-alt"></i>Adicionar</a></li>
-					<li class="item_menu"><a href="/client/edit/"><i class="margin-right-15 fas fa-tachometer-alt"></i>Editar</a></li>
-					<li class="item_menu"><a href="/client/detail/"><i class="margin-right-15 fas fa-tachometer-alt"></i>Listar</a></li>
-
+					<li class="item_menu"><a href="{{route('clients.create')}}"><i class="margin-right-15 fas fa-tachometer-alt"></i>Adicionar</a></li>
+					<li class="item_menu"><a href="{{route('clients.index')}}"><i class="margin-right-15 fas fa-tachometer-alt"></i>Listar</a></li>
+					
 				</ul>
 
 			</li>
@@ -71,7 +70,6 @@
 
 				</ul>
 			</li>
-			<li class="item_menu li_bottom download"><a href="#"><i class="margin-right-15 fas fa-cloud-download-alt"></i> Download Lusodados</a></li>
 			<li class="item_menu buy_now"><a href="#"><i class="margin-right-15 fas fa-shopping-cart"></i> Buy NOW! </a></li>
 		</ul>
 	</nav>

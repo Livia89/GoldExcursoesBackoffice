@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Models\Client;
 
 class clientController extends Controller
 {
@@ -14,7 +15,9 @@ class clientController extends Controller
      */
     public function index()
     {
-        //
+        $data = Client::Paginate(15);
+        
+        return view('clients.list', ["clients" => $data]);
     }
 
     /**
@@ -24,7 +27,7 @@ class clientController extends Controller
      */
     public function create()
     {
-        //
+        return view('clients.add');
     }
 
     /**
@@ -33,9 +36,25 @@ class clientController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
+    
     public function store(Request $request)
     {
-        //
+        $data = $request->all();
+        
+        if(!empty($data)){
+            
+            if(!client::where("email", $data["email"])->count()){
+                Client::create($data);
+                return redirect()->route("clients.index")->with("sucess", "Cliente adicionado! ");
+                
+            }else{
+                
+                // return view("clients.add", ["mensagem" => "Já existe"]);
+                return redirect()->route("clients.create")->with("error", "Já existe um cliente com este email");
+            }
+            
+           
+        }
     }
 
     /**

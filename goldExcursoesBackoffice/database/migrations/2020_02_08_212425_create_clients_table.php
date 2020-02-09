@@ -21,7 +21,8 @@ class CreateClientsTable extends Migration
             $table->string('city');
             $table->string('phone');
             $table->dateTime('dateOfBirth')->nullable();
-            $table->softDeletes(0);
+            $table->string('notes')->nullable();
+            $table->softDeletes();
             $table->timestamps();
         });
     }
@@ -33,6 +34,8 @@ class CreateClientsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('clients');
+        Schema::table('clients', function (Blueprint $table) {
+            //
+        });
     }
 }

@@ -1,7 +1,7 @@
 @extends('app')
 
 @section('content')
-<div id="content" class="container">
+<div id="" class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
         <div class="card">
@@ -122,9 +122,6 @@
     
 </div>
 
-<footer>
-		<div class="float-left"><a href="https://www.goldexcursoes.pt" class="cor-links">Gold Excursões</a> &copy; <?=date("Y");?></div>
-		<div class="float-right">Criado com ❤️ pela <a href="https://www.goldexcursoes.pt" class="cor-links"> Gold Excursões </a> </div>
-	</footer>
+@include('layouts.footer')
 
 @endsection
