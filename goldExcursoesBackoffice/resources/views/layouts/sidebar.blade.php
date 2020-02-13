@@ -34,7 +34,7 @@
 
 				<ul class="dropdown_nav">
 
-					<li class="item_menu"><a href="#"><i class="margin-right-15 fas fa-tachometer-alt"></i>Breadcumb</a></li>
+				<li class="item_menu"><a href="{{}}"><i class="margin-right-15 fas fa-plus"></i>Adicionar</a></li>
 					<li class="item_menu"><a href="#"><i class="margin-right-15 fas fa-tachometer-alt"></i>Cards</a></li>
 					<li class="item_menu"><a href="#"><i class="margin-right-15 fas fa-tachometer-alt"></i>Carousel</a></li>
 					<li class="item_menu"><a href="#"><i class="margin-right-15 fas fa-tachometer-alt"></i>Collapse</a></li>

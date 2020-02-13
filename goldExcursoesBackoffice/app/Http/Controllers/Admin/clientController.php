@@ -15,7 +15,7 @@ class clientController extends Controller
      */
     public function index()
     {
-        $data = Client::Paginate(15);
+        $data = Client::orderBy('id', 'desc')->Paginate(15);
         
         return view('clients.list', ["clients" => $data]);
     }
@@ -45,7 +45,7 @@ class clientController extends Controller
             
             if(!client::where("email", $data["email"])->count()){
                 Client::create($data);
-                return redirect()->route("clients.index")->with("sucess", "Cliente adicionado! ");
+                return redirect()->route("clients.index")->with("success", "Cliente adicionado! ");
                 
             }else{
                 
@@ -76,7 +76,14 @@ class clientController extends Controller
      */
     public function edit($id)
     {
-        //
+
+        if($id !== null){
+            $client = Client::where("id", $id)->first();
+        
+            return view('clients.edit', ['client' => $client]);
+        }else{
+            return redirect()->route('clients.list')->with("error", "Não é possível editar este cliente, por favor contactar o administrador");
+        }
     }
 
     /**
@@ -88,7 +95,19 @@ class clientController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $data = $request->all();
+        
+        $client = Client::find($id)->update($data);
+        if($client){
+            return redirect()->route("clients.edit", $id)->with("success", "Cliente editado com sucesso! ");
+                
+        }else{
+            
+            return redirect()->route("clients.edit", $id)->with("error", "Ocorreu um erro ao editar esse cliente");
+        }
+        
+        
+
     }
 
     /**
@@ -99,6 +118,14 @@ class clientController extends Controller
      */
     public function destroy($id)
     {
-        //
+        if(!isset($id))  return redirect()->route('clients.index');
+        if(Client::find($id)->delete()){
+            return redirect()->route("clients.index")->with("success", "Cliente editado com sucesso! ");
+                
+        }else{
+            
+            return redirect()->route("clients.index")->with("error", "Ocorreu um erro ao editar esse cliente");
+        
+        }
     }
 }

@@ -72,6 +72,14 @@ nav .item_menu{
 	float: none;
 
 }
+
+#sidebar_menu nav ul:not(.browser-default)>li{
+
+    display: inline-block;
+    width: 100%;
+}
+
+
 .item_menu a .fas{color: red;}
 .item_menu.active{background-color: #33444c; color: #fff;}
 

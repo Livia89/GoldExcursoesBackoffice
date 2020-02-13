@@ -9,11 +9,8 @@
 
     <title>@yield('title', "Gold Excursões")</title>
 
-    <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
-    <script src="{{ asset('js/sidebar.js') }}" defer></script>
-    <script src="{{ asset('js/main.js') }}" defer></script>
 
+ 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
@@ -32,13 +29,7 @@
     <link href="{{ asset('css/layout/general.css?' . date('YmdHis')) }}" rel="stylesheet">
     <link href="{{ asset('css/layout/shared_classes.css? ' . date('YmdHis')) }}" rel="stylesheet">
     <link href="{{ asset('css/layout/media_querys.css? ' . date('YmdHis')) }}" rel="stylesheet">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-      
 
-    
-    
-    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
- 
 
 </head>
 <body>

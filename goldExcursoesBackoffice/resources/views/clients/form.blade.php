@@ -1,18 +1,18 @@
 
       <div class="row">
         <div class="input-field col col-md-4">
-          <input id="name" name='name' value="{{old('name')}}" type="text" class="validate">
+          <input id="name" name='name' value="{{isset($client->name) ? $client->name : old('name')}}" type="text" class="validate">
           <label for="name">Nome</label>
         </div>
-       
+          
 
             <div class="input-field col col-md-4">
-              <input id="email" type="email" name='email' value="{{old('email')}}" class="validate">
+              <input id="email" type="email" name='email' value="{{isset($client->email) ? $client->email : old('email')}}" class="validate">
               <label for="email">Email</label>
             </div>
   
           <div class="input-field col col-md-4">
-            <input id="phone" type="text" name='phone' value="{{old('phone')}}">
+            <input id="phone" type="text" name='phone' value="{{isset($client->phone) ? $client->phone : old('phone')}}" >
             <label for="phone">Telefone</label>
   
           </div>
@@ -20,23 +20,23 @@
 
       <div class="row">
         <div class="input-field col col-md-6">
-        <input id="address" type="text" name='address' value="{{old('address')}}" class="validate">
+        <input id="address" type="text" name='address' value="{{isset($client->address) ? $client->address : old('address')}}" class="validate">
           <label for="address">Morada</label>
         </div>
       
         <div class="input-field col col-md-3"> 
-          <input id="city" type="text" name='city' value="{{old('city')}}" class="validate">
+          <input id="city" type="text" name='city' value="{{isset($client->city) ? $client->city : old('city')}}" class="validate">
           <label for="city">Localidade</label>
         </div>
       
       
       <div class="input-field col col-md-3"> 
-        <input id="dateOfBirth" type="date" name='dateOfBirth' value="{{old('dateOfBirth')}}" class="validate">
+        <input id="dateOfBirth" type="date" name='dateOfBirth' value="{{isset($client->dateOfBirth) ? $client->dateOfBirth : old('dateOfBirth')}}" class="validate">
         <label  for="dateOfBirth">Data de Nascimento</label>
       </div>
       
       <div class="input-field col col-md-12">
-        <textarea name='notes' id='textarea' class="materialize-textarea" value="{{old('notes')}}"></textarea>
+        <textarea name='notes' id='textarea' class="materialize-textarea" >{{isset($client->notes) ? $client->notes : old('notes')}}</textarea>
         <label for="textarea">Observações</label>
          
       </div>

@@ -28,6 +28,8 @@
         margin-right: 15px;
 }
 .inline-block{display: inline-block;}
+.vertical-middle{vertical-align: middle;}
+
 .fixed{
         position: fixed !important;
         z-index: 2 !important;
@@ -39,6 +41,10 @@
 .column .col-5{width: calc(20% - 4px);}
 .display-none{
         display: none; 
+}
+
+.justiy-content-center{
+        justify-content: center;
 }
 @media all and (max-width: 990px) and (min-width: 0){
         .display-none{
