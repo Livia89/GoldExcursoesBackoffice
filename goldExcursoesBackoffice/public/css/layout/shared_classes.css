@@ -22,7 +22,7 @@
         margin: 0 20px;
 }
 .margin-side-10{	
-        margin: 0 10px;
+        margin: 0 10px !important;
 }
 .margin-right-15{	
         margin-right: 15px;

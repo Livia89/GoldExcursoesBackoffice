@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Models\Client;
 
-class clientController extends Controller
+class ClientController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -120,11 +120,11 @@ class clientController extends Controller
     {
         if(!isset($id))  return redirect()->route('clients.index');
         if(Client::find($id)->delete()){
-            return redirect()->route("clients.index")->with("success", "Cliente editado com sucesso! ");
+            return redirect()->route("clients.index")->with("success", "Cliente apagar com sucesso! ");
                 
         }else{
             
-            return redirect()->route("clients.index")->with("error", "Ocorreu um erro ao editar esse cliente");
+            return redirect()->route("clients.index")->with("error", "Ocorreu um erro ao apagar esse cliente");
         
         }
     }

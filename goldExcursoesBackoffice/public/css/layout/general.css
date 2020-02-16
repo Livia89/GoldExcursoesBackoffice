@@ -84,3 +84,8 @@
     .btn i{
         line-height: normal;
     }
+
+    .modalBootstrap{
+        box-shadow: none;
+        background-color: transparent;
+    }
