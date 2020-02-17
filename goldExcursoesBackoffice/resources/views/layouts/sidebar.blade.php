@@ -7,15 +7,15 @@
 
 				<a href="#" class="closed">
 
-					<i class="margin-right-15 fas fa-cubes"></i>Cliente
+					<i class="margin-right-15 fas fa-users"></i>Cliente
 
 					<span class="float-right"><i class="fas fa-angle-left"></i><span>
 
 				</a>		
 
 				<ul class="dropdown_nav">
-					<li class="item_menu"><a href="{{route('clients.create')}}"><i class="margin-right-15 fas fa-tachometer-alt"></i>Adicionar</a></li>
-					<li class="item_menu"><a href="{{route('clients.index')}}"><i class="margin-right-15 fas fa-tachometer-alt"></i>Listar</a></li>
+					<li class="item_menu"><a href="{{route('clients.create')}}"><i class="margin-right-15 fas fa-user"></i>Adicionar</a></li>
+					<li class="item_menu"><a href="{{route('clients.index')}}"><i class="margin-right-15 fas fas fa-list-ol"></i>Listar</a></li>
 					
 				</ul>
 
@@ -27,16 +27,15 @@
 
 				<a href="#" class="closed">
 
-					<i class="margin-right-15 fas fa-cubes"></i>Excursões
+					<i class="margin-right-15 fas fa-bus"></i>Excursões
 
 					<span class="float-right"><i class="fas fa-angle-left"></i><span>
 				</a>		
 
 				<ul class="dropdown_nav">
-
-				<li class="item_menu"><a href="{{}}"><i class="margin-right-15 fas fa-plus"></i>Adicionar</a></li>
-					<li class="item_menu"><a href="#"><i class="margin-right-15 fas fa-tachometer-alt"></i>Cards</a></li>
-					<li class="item_menu"><a href="#"><i class="margin-right-15 fas fa-tachometer-alt"></i>Carousel</a></li>
+					
+				<li class="item_menu"><a href="{{route('tour.create')}}"><i class="margin-right-15 fas fa-plus"></i>Adicionar</a></li>
+				<li class="item_menu"><a href="{{route('tour.index')}}"><i class="margin-right-15 fas fa-list-ol"></i>Listar</a></li>
 					<li class="item_menu"><a href="#"><i class="margin-right-15 fas fa-tachometer-alt"></i>Collapse</a></li>
 					<li class="item_menu"><a href="#"><i class="margin-right-15 fas fa-tachometer-alt"></i>Forms</a></li>
 

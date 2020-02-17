@@ -85,7 +85,18 @@
         line-height: normal;
     }
 
-    .modalBootstrap{
+     .modalBootstrap{
         box-shadow: none;
         background-color: transparent;
+        
     }
+
+    .tox .tox-notification--in{
+        opacity: 0 !important;
+        display: none !important;
+    }
+
+    .table td{vertical-align: middle;}
+    
+
+ 
