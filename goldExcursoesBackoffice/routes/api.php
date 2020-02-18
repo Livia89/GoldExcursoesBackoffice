@@ -2,6 +2,10 @@
 
 use Illuminate\Http\Request;
 
+
+Route::apiResource('tours', 'api\TourController');
+
+
 /*
 |--------------------------------------------------------------------------
 | API Routes

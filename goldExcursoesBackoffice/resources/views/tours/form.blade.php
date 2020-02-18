@@ -2,7 +2,7 @@
       <div class="row">
         <div class="input-field col col-md-4">
           <input id="title" name='title' value="{{isset($tour->title) ?: old('title')}}" type="text" class="validate">
-          <label for="title">Titulo</label>
+          <label for="title">Nome</label>
         </div>
           
 

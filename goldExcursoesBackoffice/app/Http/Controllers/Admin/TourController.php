@@ -13,12 +13,29 @@ class TourController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
 
-        $data = Tour::orderBy('departure_date', 'desc')->Paginate(10);
+        $params = "";
+        $sort = 'departure_date';
+        $order = "desc";
+        $params = (object) $request->all(); 
+        $select = "";
+
+        if(isset($params->sort_by) and isset($params->order_by)){
+            $sort = $params->sort_by;
+            $order = $params->order_by;
+            $select = $sort . "-" . $order;
+        }
         
-        return view('tours.lists.index', ['tours' => $data]);
+        $data = Tour::orderBy($sort, $order)->Paginate(10);
+
+        $SEND_TO_VIEW = [
+            'tours' => $data,
+            'selected' => $select
+        ];
+
+        return view('tours.lists.index', $SEND_TO_VIEW);
     }
 
     /**

@@ -3,7 +3,10 @@
 
 @section('content')
     <div>
-            
+        @isset($selected) 
+            <input id='toSelected' type="hidden" value='{{$selected}}'>
+        @endisset
+        
     @if (session('success'))
     <div class="alert alert-success alert-dismissible fade show">
         <strong>Successo!</strong> {{session('success')}}
@@ -19,16 +22,24 @@
         </button>
     </div>
     @endif
-        <div class="col col-md-4">
-            {{-- <select name="" id="" class="form-control">
-                <option value=''>Ordernar por data </option>
-            </select> --}}
+
+        <div class="right row col-md-4"> 
+            <select name="sort" id="sort" class="form-control">
+                <option value=''>Ordenar por: </option>
+                <option value='title-asc'>Nome - asc </option>
+                <option value='title-desc'>Nome - desc </option>
+                <option value='place-asc'>Localidade - asc </option>
+                <option value='place-desc'>Localidade - desc </option>
+                <option value='price-asc'>Preço - asc </option>
+                <option value='price-desc'>Preço - desc </option>
+                <option value='departure_date-asc'>data - asc</option>
+                <option value='departure_date-desc'>data - desc</option>
+            </select>
         </div>
-    
         <table class="table table-striped center">
             <thead class="thead-dark">
                 <tr>
-                    <th scope="col">Titulo</th>
+                    <th scope="col">Nome</th>
                     <th scope="col">Localidade</th>
                     <th scope="col">Preço</th>
                     <th scope="col">Data</th>
@@ -39,7 +50,7 @@
                     @forelse ($tours as $tour)
                     
                         <tr>
-                            <td>{{$tour->title}}</td>
+                            <td class="center">{{$tour->title}}</td>
                             <td class="center">{{$tour->place}}</td>
                             <td class="center">{{$tour->price}}</td>
                             <td class="center">{{$tour->departure_date}}</td>
@@ -90,6 +101,47 @@
         
           });
       });
+
+      window.onload = function () {
+
+        $oi = $("#toSelected").val();
+        if($oi != ""){
+            alert("select option[value='"+$oi+"']");
+            $("select option[value='"+$oi+"']").attr("selected", true);
+            
+        }
+
+        
+        // alert($("option").val($oi));
+       // if($oi != "") $("option").val($oi).attr("selected", true);
+        
+        
+
+        var select = $("#sort");
+        var toOrder = [];
+        var params = "";
+        var url = "";
+        
+        select.on("change", function(e){
+            
+            toOrder = ($(this)[0].value).split("-");
+            if(toOrder.length){
+             params = "?sort_by=" + toOrder[0] + "&order_by=" + toOrder[1]; 
+            }
+            
+            url = window.location.href.split("?")[0]; 
+            window.location.href = url + params;
+
+
+        });
+
+       
+
+      }
+
+     
+      
+    
   </script>
   
 @endsection

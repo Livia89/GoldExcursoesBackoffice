@@ -46,6 +46,8 @@
 .justiy-content-center{
         justify-content: center;
 }
+
+.align-left{text-align: left;}
 @media all and (max-width: 990px) and (min-width: 0){
         .display-none{
             display: none; 
