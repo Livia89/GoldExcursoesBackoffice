@@ -98,7 +98,12 @@
 
     .table td{vertical-align: middle;}
 
-    
+
+/* Alterei aqui */
+.modal.datepicker-modal.open, .modal.timepicker-modal.open{
+    bottom: auto;
+}
+
     
 
  

@@ -6,6 +6,9 @@ use App\Models\Tour;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
+use Carbon\Carbon;
+
+
 class TourController extends Controller
 {
     /**
@@ -93,12 +96,12 @@ class TourController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function edit(Tour $tour)
-    {
-        //
+    {   
+        return view('tour.edit.index', ["tour" => $tour]);
     }
 
     /**
-     * Update the specified resource in storage.
+ * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
      * @param  \App\Models\Tour  $tour
@@ -106,9 +109,18 @@ class TourController extends Controller
      */
     public function update(Request $request, Tour $tour)
     {
-        //
-    }
 
+        $res = $request->all();
+        $res["departure_date"] = date("Y-m-d h:i:s", strtotime($res["departure_date"]));
+        $res["return_date"] =  date("Y-m-d h:i:s", strtotime($res["return_date"]));
+        
+        if($request != null and $tour != null){
+            $tour->update($res);
+            $tour->save();
+            return redirect()->route("tour.edit", [$tour->id]);
+        }
+    }
+ 
     /**
      * Remove the specified resource from storage.
      *
@@ -117,6 +129,7 @@ class TourController extends Controller
      */
     public function destroy(Tour $tour)
     {
-        //
+        if(!is_null($tour)) $tour->delete();
+        return redirect()->route('tour.index');
     }
 }

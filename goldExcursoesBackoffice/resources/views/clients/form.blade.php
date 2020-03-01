@@ -31,7 +31,7 @@
       
       
       <div class="input-field col col-md-3"> 
-        <input id="dateOfBirth" type="date" name='dateOfBirth' value="{{isset($client->dateOfBirth) ? $client->dateOfBirth : old('dateOfBirth')}}" class="validate">
+        <input class='datepicker' id="dateOfBirth" type="text" name='dateOfBirth' value="{{isset($client->dateOfBirth) ? $client->dateOfBirth : old('dateOfBirth')}}" class="validate">
         <label  for="dateOfBirth">Data de Nascimento</label>
       </div>
       
@@ -46,8 +46,27 @@
       <button class="btn right waves-effect waves-light" type="submit">Enviar
         <i class="material-icons right">send</i>
       </button>
+     
+      @section('scripts')
 
-      <script>
+        <script>
+            var mesAno = [ 'Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro' ];
+            var diaSemana = [ 'Domingo', 'Segunda-Feira', 'Terca-Feira', 'Quarta-Feira', 'Quinta-Feira', 'Sexta-Feira', 'Sabado' ];
+
+           $('.datepicker').datepicker({
+            i18n:{ 
+              months: mesAno,
+              monthsShort: ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez'],
+              weekdaysShort: ['Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sáb', 'Dom'],
+              weekdays: diaSemana,
+            },
+              format: "dd-mm-yyyy"  
+           });
+        </script>
+      @endsection
+        
+     
+     <script>
         window.onload = function(){
        
             let input = document.getElementsByTagName("input");
@@ -70,5 +89,6 @@
               
             }
         }
+ 
       </script>
     
