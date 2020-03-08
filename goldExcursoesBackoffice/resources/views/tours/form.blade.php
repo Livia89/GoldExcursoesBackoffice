@@ -21,12 +21,12 @@
             <label for="hotel">Hotel</label>
         </div>
         <div class="input-field col col-md-3"> 
-        <input id="departure_date" type="text" data-time="" data-date="" class='datepicker timepicker' name='departure_date' value="{{(isset($tour->departure_date) and $tour->departure_date != "") ? $tour->departure_date->format('Y-m-d\Th:i')  : old('departure_date')}}" class="validate">
+        <input id="departure_date" type="text" data-time="" data-date="" data-h='' class='datepicker timepicker' name='departure_date' value="{{(isset($tour->departure_date) and $tour->departure_date != "") ? $tour->departure_date->format('d-m-Y h:i')  : old('departure_date')}}" class="validate">
           <label for="departure_date"></label>
         </div>
         
         <div class="input-field col col-md-3"> 
-          <input id="return_date" placeholder='' type="text" data-time="" data-date="" class='datepicker timepicker' name='return_date' value="{{(isset($tour->return_date) and $tour->return_date != "")  ? $tour->return_date->format('Y-m-d\Th:i') : old('return_date')}}" class="validate">
+          <input id="return_date" placeholder='' type="text" data-time="" data-h='' data-date="" class='datepicker timepicker end' name='return_date' value="{{(isset($tour->return_date) and $tour->return_date != "")  ? $tour->return_date->format('d-m-Y h:i') : old('return_date')}}" class="validate">
           <label for="return_date"></label>
         </div>
       
@@ -76,43 +76,73 @@
             }
         }
       </script>
+      @section('styles')
+        <link href="{{ asset('js/datetimepicker/jquery.datetimepicker.css? ' . date('YmdHis')) }}" rel="stylesheet">
+      @endsection
       @section('scripts')
     
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-maskmoney/3.0.2/jquery.maskMoney.min.js" type="text/javascript"></script>
         <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
-        <script>
+        <script src="{{asset('js/datetimepicker/jquery.datetimepicker.full.min.js')}}" referrerpolicy="origin"></script>
+       
+       <script>
 
             tinymce.init({
                 selector: '#textarea',
                 height: '300',
-                plugins: 'image',
-            });
+                plugins: [
+                "advlist autolink link image media filemanager code responsivefilemanager"
+              ],
+              toolbar1: "undo redo  | bold italic underline | forecolor backcolor | responsivefilemanager | link unlink | image media | code",
+              image_advtab: true,
+              external_filemanager_path: "/js/filemanager/",
+              filemanager_title: "Responsive Filemanager",
+              external_plugins: {
+                "responsivefilemanager": "/js/tinymce/plugins/responsivefilemanager/plugin.min.js",
+                "filemanager": "/js/filemanager/plugin.min.js"
+              },
+              
+              });
 
             $(".mask-money").maskMoney({
               thousands:'.'
             });
 
-            $('.timepicker').timepicker({
+            $.datetimepicker.setLocale("pt");
+
+            $('.timepicker').datetimepicker({
+              format: "d-m-Y H:i",
+              minDate: new Date()
+               
+          });
+
+
+    /*        $('.timepicker').timepicker({
               autoClose: true,
               onCloseStart: function(e){
                 var el = $(e.parentNode).find(".timepicker");
-                el.attr("data-time", el.val());
+                var array = el.val().split(" ");
                 
-                fillInput(el);
+                el.attr({"data-time" : " ", "data-time" : array[0]}); /*Essa parte não está legal, quando edita vem a data junto  */ 
+            /*    el.attr("data-h", array[1]); /*Essa parte não está legal, quando edita vem a data junto  */ 
+                
+            /*    fillInput(el);
 
               }
-
             });
-      
-            function fillInput(el){
+            
+            /* A data não esta bem, quando mudo ela altera no date do input mas no val não */
+            /* Esta tudo um coco */
+        /*    function fillInput(el){
                 var date = el.data("date");
+               // date = date[2] + "-" + date[1] + "-" + date[0]; 
                 var time = el.data("time");
                 el.val(date + " " +  time);
                 
             }
           
             /* Opções */
-            var mesAno = [ 'Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro' ];
+          /*  var mesAno = [ 'Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro' ];
             var diaSemana = [ 'Domingo', 'Segunda-Feira', 'Terca-Feira', 'Quarta-Feira', 'Quinta-Feira', 'Sexta-Feira', 'Sabado' ];
             var mesesCurtos = ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez'];
             var diasDaSemanaCurtos = ['Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sáb', 'Dom'];
@@ -129,17 +159,30 @@
               /* onSelect:  function(){ 
                 $(this).trigger("click");
               }, */
-              onClose: function(){
+            /*  onClose: function(){
+                  var data;
                   /* Quando vai fechar o datepicker preenche o data-date com a data escolhida */
-                  var fullDate = new Date(this.date).toISOString();
-                  var el = $("input[name='"+$(this)[0].el.name+"']");
-                  fullDate = fullDate.split("T");
-                  el.attr("data-date", fullDate[0]);
+     /*             console.log(this.date);
+                  
+                  var fullDate = new Date(this.date);
+                 
+                  
+                  data =  fullDate.getDay() < 10 ? "0" + fullDate.getDay() : fullDate.getDay() + "-";
+                  data += fullDate.getMonth() < 10 ? '0' + fullDate.getMonth() : fullDate.getMonth() + "-";
+                  data += fullDate.getFullYear();
+                   
+                    
+                
                   
               }
             
            });
-
+           /*Estou a tentar arrumar o modal mas quase sem sucesso */
+         /*  $(".modal-overlay").on("click", function(e){
+             e.preventDefault();
+              alert("clicou");
+           });
+*/
           
             </script>
       @endsection

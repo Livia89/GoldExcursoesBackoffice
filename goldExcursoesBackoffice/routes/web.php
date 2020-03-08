@@ -10,6 +10,8 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
+
+
 Route::resource('clients', 'Admin\ClientController');
 Route::resource('tour', 'Admin\TourController');
 

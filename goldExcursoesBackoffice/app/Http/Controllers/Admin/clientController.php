@@ -44,6 +44,7 @@ class ClientController extends Controller
         if(!empty($data)){
             
             if(!client::where("email", $data["email"])->count()){
+                $data["dateOfBirth"] = date("Y-m-d", strtotime($data["dateOfBirth"]));
                 Client::create($data);
                 return redirect()->route("clients.index")->with("success", "Cliente adicionado! ");
                 

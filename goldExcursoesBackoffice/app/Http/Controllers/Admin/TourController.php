@@ -63,9 +63,10 @@ class TourController extends Controller
         $data = $request->all();
         
         if(!empty($data)){
-            
-            if(Tour::create($data)){
+            $data["departure_date"] = date("Y-m-d h:i:s", strtotime($data["departure_date"]));
+            $data["return_date"] =  date("Y-m-d h:i:s", strtotime($data["return_date"]));
                 
+            if(Tour::create($data)){
                 return redirect()->route("tour.index")->with("success", "Viagem adicionada! ");
                 
             }else{
@@ -97,7 +98,8 @@ class TourController extends Controller
      */
     public function edit(Tour $tour)
     {   
-        return view('tour.edit.index', ["tour" => $tour]);
+        
+        return view('tours.edit.index', ["tour" => $tour]);
     }
 
     /**

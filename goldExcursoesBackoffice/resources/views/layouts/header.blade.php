@@ -31,7 +31,7 @@
     <link href="{{ asset('css/layout/media_querys.css? ' . date('YmdHis')) }}" rel="stylesheet">
 
     
-
+    @yield("styles")
    
 
 </head>

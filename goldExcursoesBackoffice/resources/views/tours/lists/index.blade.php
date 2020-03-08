@@ -95,10 +95,8 @@
                 document.querySelector(".accepted").onclick = function(){
                     el.parentNode.submit(); /* Submete o form associado ao botão */ 
                 };
-                
             }
 
-        
           });
       });
 
@@ -106,16 +104,8 @@
 
         $oi = $("#toSelected").val();
         if($oi != ""){
-            alert("select option[value='"+$oi+"']");
-            $("select option[value='"+$oi+"']").attr("selected", true);
-            
+            $("select option[value='"+$oi+"']").attr("selected", true);            
         }
-
-        
-        // alert($("option").val($oi));
-       // if($oi != "") $("option").val($oi).attr("selected", true);
-        
-        
 
         var select = $("#sort");
         var toOrder = [];
